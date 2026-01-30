@@ -1,27 +1,22 @@
 # Monday Motivation
 
+## Email SMTP setup
 
-### Email SMTP setup
+1. Use the correct SMTP address for your email provider::
 
-1. Make sure you've got the correct smtp address for your email provider:
+| Provider | SMTP Server             |
+| -------- | ----------------------- |
+| Gmail    | `smtp.gmail.com`        |
+| Hotmail  | `smtp.live.com`         |
+| Outlook  | `outlook.office365.com` |
+| Yahoo    | `smtp.mail.yahoo.com`   |
 
-Gmail: smtp.gmail.com
-
-Hotmail: smtp.live.com
-
-Outlook: outlook.office365.com
-
-Yahoo: smtp.mail.yahoo.com
-
-If you use another email provider, just Google for your email provider e.g. "Gmail SMTP address"
-
-Below are steps specific to users sending email from Gmail addresses.
+👉 If you’re using another provider, search online for:
+<your email provider> SMTP server settings
 
 2. Go to https://myaccount.google.com/
 
 Select Security on the left and scroll down to How you sign in to Google.
-
-Enable 2-Step Verification
 
 3. Find the section on App Passwords by searching for it:
 
@@ -44,15 +39,13 @@ smtplib.SMTP("smtp.gmail.com", port=587)
 ## Running on local machine
 
 ### Set Environment variables
-Create .env file and add these environment variables
+Create a .env file in the project root and add:
 
     EMAIL_SMTP_SERVER=smtp-server-address-of-your-email-provider
     EMAIL_PORT=587
 
     EMAIL_ID=your-mail-id
     EMAIL_PASSWORD=your-app-password
-    SENDER_NAME=your-name
-
 
 **Create Python virtual environment**
 
